@@ -6,7 +6,9 @@ PVM makes it easy to install multiple Python versions, switch the version used b
 
 **[Download PVM for Windows](https://raw.githubusercontent.com/uselessbruh-stack/pvm/main/dist/PVM-Setup.exe)**
 
-The installer is about 171 KB and does not bundle Python. PVM downloads the Python version you choose from official Python sources and shows download progress while it runs.
+The installer is about 175 KB and does not bundle Python. PVM downloads the Python version you choose from official Python sources and shows download progress while it runs.
+
+The installer is currently unsigned, so Windows may show a reputation warning for a new download. That is different from an antivirus alert naming a threat. If Defender or another antivirus reports a named threat, do not run the installer; share the detection name with us so it can be investigated.
 
 ## Get started
 
@@ -59,7 +61,7 @@ PVM uses the official full Windows installer from python.org when one is availab
 Run the included installer script to remove PVM from your PATH, PowerShell profile, and Start menu. Your installed Python versions are preserved:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File "$env:USERPROFILE\.pvm\install.ps1" -Uninstall
+powershell -ExecutionPolicy RemoteSigned -File "$env:USERPROFILE\.pvm\install.ps1" -Uninstall
 ```
 
 To remove PVM and all Python versions managed by it, delete `%USERPROFILE%\.pvm` after uninstalling.
@@ -69,7 +71,7 @@ To remove PVM and all Python versions managed by it, delete `%USERPROFILE%\.pvm`
 On Windows with the .NET Framework C# compiler available, run:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\build.ps1
+powershell -ExecutionPolicy RemoteSigned -File .\build.ps1
 ```
 
 This produces `dist\PVM-Setup.exe` and `dist\pvm.exe`. Both use `favicon.png` as their Windows icon. The setup executable includes the PVM manager and installer and adds a **PVM for Windows** shortcut to the current user's Start menu.

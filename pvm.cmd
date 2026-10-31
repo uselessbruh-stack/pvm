@@ -18,4 +18,4 @@ if not exist "%PVM_SCRIPT%" (
     exit /b 1
 )
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%PVM_SCRIPT%" %*
+powershell.exe -NoProfile -ExecutionPolicy RemoteSigned -File "%PVM_SCRIPT%" %*

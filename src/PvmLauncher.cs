@@ -1,6 +1,14 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
+
+[assembly: AssemblyTitle("PVM for Windows")]
+[assembly: AssemblyCompany("PVM")]
+[assembly: AssemblyProduct("PVM for Windows")]
+[assembly: AssemblyDescription("Python version manager for Windows")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
 
 internal static class PvmLauncher
 {
@@ -32,7 +40,7 @@ internal static class PvmLauncher
 
         string powershell = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System),
             @"WindowsPowerShell\v1.0\powershell.exe");
-        var command = new System.Text.StringBuilder("-NoLogo -NoProfile -ExecutionPolicy Bypass -File ");
+        var command = new System.Text.StringBuilder("-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -File ");
         command.Append(Quote(script));
         foreach (string arg in args) command.Append(' ').Append(Quote(arg));
 

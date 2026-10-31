@@ -11,7 +11,7 @@
 
 .NOTES
     Run this script once after cloning or downloading PVM:
-      powershell -ExecutionPolicy Bypass -File install.ps1
+      powershell -ExecutionPolicy RemoteSigned -File install.ps1
 #>
 
 param(

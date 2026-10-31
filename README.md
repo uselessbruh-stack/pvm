@@ -4,7 +4,7 @@
 
 PVM makes it easy to install multiple Python versions, switch the version used by your terminal, and keep existing Python installations available.
 
-**[Download PVM for Windows](dist/PVM-Setup.exe?raw=1)**
+**[Download PVM for Windows](https://raw.githubusercontent.com/uselessbruh-stack/pvm/main/dist/PVM-Setup.exe)**
 
 The installer is about 171 KB and does not bundle Python. PVM downloads the Python version you choose from official Python sources and shows download progress while it runs.
 
